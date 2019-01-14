@@ -25,15 +25,18 @@ export class TodoItem extends Component {
        }*/
     }
 
-    markComplete = (e) =>{
-      console.log(this.props)
-    }
+ 
 
     render(){
+
+
+  ///This is called deconstructing. I am pulling out the id and title that i need
+        const {id, title} =this.props.todo;
         return(
             <div style={this.getStyle()}>
-           <p><input type="checkbox" onChange={this.markComplete}/>{' '}
-           {this.props.todo.title}</p>
+           <p><input type="checkbox" onChange={this.props.markComplete.bind(this,id)}/>{' '}
+           {title}</p>
+           
             </div>
         )
     }
