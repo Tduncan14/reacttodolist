@@ -3,17 +3,18 @@ import React,{Component} from 'react';
 export class AddTodo extends Component {
     render() {
    return(
-    <form>
+    <form style={{display:'flex'}}>
         <input 
         type="text"
          name="title" 
+         style={{flex:'10'}}
          placeholder="Add to do list" />
 
          <input 
          type="submit" 
          value="Submit" 
          className="btn"
-         style={{flex:1}}/>
+         style={{flex:'1'}}/>
     </form>
        )
     }
