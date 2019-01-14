@@ -23,10 +23,11 @@ class App extends Component {
     ]
   }
   render() {
+   
     return (
       <div className="App">
       
-       <Todos />
+       <Todos todos={this.state.todos} />
       </div>
     );
   }
